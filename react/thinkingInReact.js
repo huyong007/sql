@@ -102,4 +102,4 @@ const PRODUCTS = [
 ReactDOM.render(
     <FilterableProductTable products={RPODUCTS} />,
     document.getElementById('container')
-)
+)   
