@@ -7,3 +7,4 @@
 - swift UI知识
 - go知识
 - 计算机英语:单词强记
+- babel wabpack知识:教程:https://juejin.im/post/5c622eddf265da2de04a9891
