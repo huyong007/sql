@@ -175,11 +175,15 @@ class FilterableProductTable extends React.Component {
   }
 }
 
+function Welcome(props) {
+  return <div>hello!{props.name},this is your first react-app</div>
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Welcome name='胡永' />
         <FilterableProductTable products={PRODUCTS} />
       </header>
     </div>
