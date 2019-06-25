@@ -1,3 +1,4 @@
+### 课程重点原则摘要
 - 第一课:react哲学
   - 组件功能单一原则
   - 简单应用,自上而下的编写应用
@@ -10,4 +11,12 @@
   - 数据流的单向传递:从高层组件想底层组件传递,是通过首先在高层组件内部定义一个数据属性,把这个数据属性绑定到在render中的底层组件上,在底层组件上面通过this.props.thisProp接收这个属性进行进一步的处理
   - 注意方法的绑定记得要绑定到该组件之内,如果存在重复名字的方法,使用bind(this)
 - props的原则:所有的react组件都必须像纯函数一样保护它们的props不被更改
-- charts:https://react.docschina.org/docs/state-and-lifecycle.html     2019-6-24
+### 课程进度
+时间|大章节目|小章节|
+2019-6-24| charts:https://react.docschina.org/docs/state-and-lifecycle.html     
+ 2019-6-25| charts:https://react.docschina.org/docs/state-and-lifecycle.html  | 生命周期方法 
+
+
+
+### 学习失误总结
+- 大部分的失误都是自己书写错误导致的错误,并且这种错误因为自己的自信并未仔细检查导致了更难以察觉
