@@ -175,25 +175,51 @@ class FilterableProductTable extends React.Component {
   }
 }
 
-function Welcome(props) {
-  return <div>hello!{props.name},this is your first react-app</div>
-}
-function Tick() {
-  const element = (
-    <div>
-      <h1>hello,world!</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  )
-  return element
+
+
+
+
+class Clock extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+  tick() {
+    this.setState({
+      date: new Date()
+    })
+
+  }
+  render() {
+    return (
+      <div>
+        <FormattedDate date={this.state.date} />
+        <h1>hello,{this.props.name}!</h1>
+        <h2>react 的世界就在你眼前.</h2>
+      </div>
+    )
+  }
 }
 
+
+
+function FormattedDate(props) {
+  return <h2>现在时刻{props.date.toLocaleTimeString()}.</h2>
+}
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Tick />
-        <Welcome name='胡永' />
+        <Clock name='胡永' />
         <FilterableProductTable products={PRODUCTS} />
       </header>
     </div>

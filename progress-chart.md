@@ -11,11 +11,17 @@
   - 数据流的单向传递:从高层组件想底层组件传递,是通过首先在高层组件内部定义一个数据属性,把这个数据属性绑定到在render中的底层组件上,在底层组件上面通过this.props.thisProp接收这个属性进行进一步的处理
   - 注意方法的绑定记得要绑定到该组件之内,如果存在重复名字的方法,使用bind(this)
 - props的原则:所有的react组件都必须像纯函数一样保护它们的props不被更改
+- 使用state的原则:
+  - 不要直接修改state,而是使用this.setState来进行修改
+  - state的更新可能是异步的,对于依赖state更新下一个状态,,解决方案:在setState()里面接收一个函数而不是一个对象,这个函数用上一个state作为第一个参数,将此次更新被应用时的props作为第二个参数
+  - state的合并会被合并-------这个合并的影响并不是很理解,看到的解释是第二个合并会完全保留第一个合并,并且完全替换第二个更新
+  - 
 ### 课程进度
-时间|大章节目|小章节|
-2019-6-24| charts:https://react.docschina.org/docs/state-and-lifecycle.html     
- 2019-6-25| charts:https://react.docschina.org/docs/state-and-lifecycle.html  | 生命周期方法 
-
+| 时间      | 大章节目                                                         | 小章节       |
+| :-------- | :--------------------------------------------------------------: | -----------: |
+| 2019-6-24 | charts:https://react.docschina.org/docs/state-and-lifecycle.html |
+| 2019-6-25 | charts:https://react.docschina.org/docs/state-and-lifecycle.html | 生命周期方法 |
+| 2019-6-26 | charts:https://react.docschina.org/docs/introducing-jsx.html     | jsx简介      |
 
 
 ### 学习失误总结
