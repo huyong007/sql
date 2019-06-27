@@ -215,11 +215,13 @@ class Clock extends React.Component {
 function FormattedDate(props) {
   return <h2>现在时刻{props.date.toLocaleTimeString()}.</h2>
 }
+// const name = 'huyong';
+// const element = <h1>hello,{name}</h1>
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Clock name='胡永' />
+        <Clock  name='胡永'/>
         <FilterableProductTable products={PRODUCTS} />
       </header>
     </div>

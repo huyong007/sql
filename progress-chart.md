@@ -15,14 +15,22 @@
   - 不要直接修改state,而是使用this.setState来进行修改
   - state的更新可能是异步的,对于依赖state更新下一个状态,,解决方案:在setState()里面接收一个函数而不是一个对象,这个函数用上一个state作为第一个参数,将此次更新被应用时的props作为第二个参数
   - state的合并会被合并-------这个合并的影响并不是很理解,看到的解释是第二个合并会完全保留第一个合并,并且完全替换第二个更新
-  - 
+- jsx的使用规范
+  - jsx也是一个种表达式
+- diff算法的要求
+  - 组件应该保持尽量多的复用
+  - key值应该具有稳定性,可预测性,以及列表唯一的性质
 ### 课程进度
-| 时间      | 大章节目                                                         | 小章节       |
-| :-------- | :--------------------------------------------------------------: | -----------: |
-| 2019-6-24 | charts:https://react.docschina.org/docs/state-and-lifecycle.html |
-| 2019-6-25 | charts:https://react.docschina.org/docs/state-and-lifecycle.html | 生命周期方法 |
-| 2019-6-26 | charts:https://react.docschina.org/docs/introducing-jsx.html     | jsx简介      |
+| 时间      | 大章节目  | 小章节       |预算(min)|实际|
+| :-------- | :----------:| :-----------: |:---:|:---:|
+| 2019-6-24 | charts:https://react.docschina.org/docs/state-and-lifecycle.html |||
+| 2019-6-25 | charts:https://react.docschina.org/docs/state-and-lifecycle.html | 生命周期方法 |||
+| 2019-6-26 | charts:https://react.docschina.org/docs/introducing-jsx.html     | jsx简介      |||
+|2019-6-27|charts:https://react.docschina.org/docs/higher-order-components.html|高阶组件|60||
 
 
 ### 学习失误总结
 - 大部分的失误都是自己书写错误导致的错误,并且这种错误因为自己的自信并未仔细检查导致了更难以察觉
+
+### 问题聚集
+- diff算法中使用id和index作为两种不同的key的比较并未理解清楚
