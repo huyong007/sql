@@ -215,13 +215,58 @@ class Clock extends React.Component {
 function FormattedDate(props) {
   return <h2>现在时刻{props.date.toLocaleTimeString()}.</h2>
 }
-// const name = 'huyong';
-// const element = <h1>hello,{name}</h1>
+
+; class Cat extends React.Component {
+  render() {
+    const mouse = this.props.mouse;
+    return (
+      <img src="/cat.jpg" alt='' style={{ position: 'absolute', left: mouse.x, top: mouse.y }} />
+    );
+  }
+}
+
+class MouseWithCat extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.state = { x: 0, y: 0 };
+  }
+  handleMouseMove(event) {
+    this.setState({
+      x: event.clientX,
+      y: event.clientY
+    })
+  }
+  render() {
+    return (
+      <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>
+        {/* <p>当前鼠标位置是({this.state.x},{this.state.y})</p> */}
+
+        <Cat mouse={this.state} />
+      </div>
+    );
+
+  }
+}
+class MouseTracker extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>移动鼠标!</h1>
+        <MouseWithCat />
+      </div>
+    );
+  }
+
+}
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Clock  name='胡永'/>
+        <Clock name='胡永' />
+        <MouseTracker />
         <FilterableProductTable products={PRODUCTS} />
       </header>
     </div>

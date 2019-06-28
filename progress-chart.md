@@ -20,13 +20,15 @@
 - diff算法的要求
   - 组件应该保持尽量多的复用
   - key值应该具有稳定性,可预测性,以及列表唯一的性质
+- HOC 高阶组件总结
+  - HOC章节中很多都是看不明白,但是大致的意思是HOC就像一个化妆间,通过这个化妆间的人的某些属性改变了
 ### 课程进度
 | 时间      | 大章节目  | 小章节       |预算(min)|实际|
 | :-------- | :----------:| :-----------: |:---:|:---:|
 | 2019-6-24 | charts:https://react.docschina.org/docs/state-and-lifecycle.html |||
 | 2019-6-25 | charts:https://react.docschina.org/docs/state-and-lifecycle.html | 生命周期方法 |||
 | 2019-6-26 | charts:https://react.docschina.org/docs/introducing-jsx.html     | jsx简介      |||
-|2019-6-27|charts:https://react.docschina.org/docs/higher-order-components.html|高阶组件|60||
+|2019-6-27|charts:https://react.docschina.org/docs/higher-order-components.html   |高阶组件|60||
 
 
 ### 学习失误总结
