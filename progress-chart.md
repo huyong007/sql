@@ -28,7 +28,8 @@
 | 2019-6-24 | charts:https://react.docschina.org/docs/state-and-lifecycle.html |||
 | 2019-6-25 | charts:https://react.docschina.org/docs/state-and-lifecycle.html | 生命周期方法 |||
 | 2019-6-26 | charts:https://react.docschina.org/docs/introducing-jsx.html     | jsx简介      |||
-|2019-6-27|charts:https://react.docschina.org/docs/higher-order-components.html   |高阶组件|60||
+|2019-6-27|charts:https://react.docschina.org/docs/higher-order-components.html   |高阶组件|60|50|
+|2019-6-27|charts:https://react.docschina.org/docs/render-props.html  |render props|60||
 
 
 ### 学习失误总结
