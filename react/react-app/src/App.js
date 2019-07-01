@@ -1,11 +1,52 @@
 import React from 'react';
 import './App.css';
 
+import { ThemeContext, themes } from './theme-context';
+import ThemedButton from './themed-button';
 
 
 
 
 
+class ToolbarParent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: themes.light,
+    };
+    this.toggleTheme = () => {
+      this.setState(state => ({
+        theme:
+          state.theme === themes.dark
+            ? themes.light
+            : themes.dark,
+      }));
+    };
+  }
+  render() {
+    return (
+      <Page>
+        <ThemeContext.Provider value={this.state.theme}>
+          <Toolbar changeTheme={this.toggleTheme} />
+        </ThemeContext.Provider>
+        <Section>
+          <ThemedButton />
+        </Section>
+      </Page>
+    )
+
+  }
+}
+
+function Toolbar(props) {
+  return (
+    <div>
+      <ThemedButton onClick={props.changeTheme}>
+        change Theme
+      </ThemedButton>
+    </div>
+  )
+}
 
 
 
@@ -30,9 +71,11 @@ class Clock extends React.Component {
     })
 
   }
+
   render() {
     return (
       <div>
+        <ToolbarParent />
         <FormattedDate date={this.state.date} />
         <h1>hello,{this.props.name}!</h1>
         <h2>react 的世界就在你眼前.</h2>
