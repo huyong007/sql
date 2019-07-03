@@ -25,15 +25,15 @@
 - Render Props 这个章节也是看的不是很懂,懵逼程度高于HOC
 - context的使用原理很简单,对于可复用的数据抽离出来形成一个单独的概念context,就像一个方法在整个程序中多次使用就抽离出来,形成一个单独的function进而避免重复劳动
 ### 课程进度
-| 时间      | 大章节目                                                             | 小章节       | 预算(min) | 实际  |
-| :-------- | :------------------------------------------------------------------: | :----------: | :-------: | :---: |
-| 2019-6-24 | charts:https://react.docschina.org/docs/state-and-lifecycle.html     |
-| 2019-6-25 | charts:https://react.docschina.org/docs/state-and-lifecycle.html     | 生命周期方法 |
-| 2019-6-26 | charts:https://react.docschina.org/docs/introducing-jsx.html         | jsx简介      |
-| 2019-6-27 | charts:https://react.docschina.org/docs/higher-order-components.html | 高阶组件     | 60        | 50    |
-| 2019-6-27 | charts:https://react.docschina.org/docs/render-props.html            | render props | 60        | 40    |
-| 2019-6-27 | charts:https://react.docschina.org/docs/context.html#reactcreatecontext           | context | 60        |     |
-
+| 时间      | 大章节目                                                                                                                  | 小章节       | 预算(min) | 实际  |
+| :-------- | :-----------------------------------------------------------------------------------------------------------------------: | :----------: | :-------: | :---: |
+| 2019-6-24 | charts:https://react.docschina.org/docs/state-and-lifecycle.html                                                          |
+| 2019-6-25 | charts:https://react.docschina.org/docs/state-and-lifecycle.html                                                          | 生命周期方法 |
+| 2019-6-26 | charts:https://react.docschina.org/docs/introducing-jsx.html                                                              | jsx简介      |
+| 2019-6-27 | charts:https://react.docschina.org/docs/higher-order-components.html                                                      | 高阶组件     | 60        | 50    |
+| 2019-6-27 | charts:https://react.docschina.org/docs/render-props.html                                                                 | render props | 60        | 40    |
+| 2019-6-27 | charts:https://react.docschina.org/docs/context.html#reactcreatecontext                                                   | context      | 60        |       |
+| 2019-6-27 | charts:https://medium.com/free-code-camp/introducing-rekit-studio-a-real-ide-for-react-and-redux-development-baf0c99cb542 | rekit demo   | 60        |
 
 ### 学习失误总结
 - 大部分的失误都是自己书写错误导致的错误,并且这种错误因为自己的自信并未仔细检查导致了更难以察觉
