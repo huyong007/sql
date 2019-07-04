@@ -1,6 +1,8 @@
 import initialState from './initialState';
+import { reducer as fetchTopicsReducer } from './fetchTopics';
 
 const reducers = [
+  fetchTopicsReducer,
 ];
 
 export default function reducer(state = initialState, action) {
