@@ -34,6 +34,9 @@
 | 2019-6-27 | charts:https://react.docschina.org/docs/render-props.html                                                                 | render props | 60        | 40    |
 | 2019-6-27 | charts:https://react.docschina.org/docs/context.html#reactcreatecontext                                                   | context      | 60        |       |
 | 2019-6-27 | charts:https://medium.com/free-code-camp/introducing-rekit-studio-a-real-ide-for-react-and-redux-development-baf0c99cb542 | rekit demo   | 60        |
+| 2019-6-27 | charts:https://redux.js.org/introduction/getting-started                                                                  | redux        | 60        |
+
+
 
 ### 学习失误总结
 - 大部分的失误都是自己书写错误导致的错误,并且这种错误因为自己的自信并未仔细检查导致了更难以察觉
