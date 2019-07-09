@@ -3,6 +3,7 @@ import './App.css';
 
 import { ThemeContext, themes } from './theme-context';
 import ThemeTogglerButton from './theme-toggler-button';
+import pureRedux from './PureRedux'
 
 
 
@@ -29,9 +30,9 @@ class ToolbarParent extends React.Component {
   }
   render() {
     return (
-        <ThemeContext.Provider value={this.state}>
-          <Content />
-        </ThemeContext.Provider>
+      <ThemeContext.Provider value={this.state}>
+        <Content />
+      </ThemeContext.Provider>
     )
 
   }
@@ -82,7 +83,14 @@ class Clock extends React.Component {
 }
 
 function FormattedDate(props) {
-  return <h2>现在时刻{props.date.toLocaleTimeString()}.</h2>
+  let redux = pureRedux();
+  return (
+
+    <h2>
+      现在时刻{props.date.toLocaleTimeString()}.
+      <div>{redux}</div>
+    </h2>
+  )
 };
 
 
@@ -93,6 +101,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Clock name='胡永' />
+
       </header>
     </div>
   );
