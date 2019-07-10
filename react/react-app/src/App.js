@@ -3,7 +3,7 @@ import './App.css';
 
 import { ThemeContext, themes } from './theme-context';
 import ThemeTogglerButton from './theme-toggler-button';
-import pureRedux from './PureRedux'
+import pureRedux from './redux/PureRedux'
 
 
 
@@ -83,12 +83,11 @@ class Clock extends React.Component {
 }
 
 function FormattedDate(props) {
-  let redux = pureRedux();
   return (
 
     <h2>
       现在时刻{props.date.toLocaleTimeString()}.
-      <div>{redux}</div>
+      <div>{pureRedux()}</div>
     </h2>
   )
 };
