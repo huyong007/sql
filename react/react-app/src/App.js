@@ -5,6 +5,8 @@ import { ThemeContext, themes } from './theme-context';
 import ThemeTogglerButton from './theme-toggler-button';
 import pureRedux from './redux/PureRedux'
 
+import Counter from './redux/Counter'
+
 
 
 
@@ -100,7 +102,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Clock name='胡永' />
-
+        <Counter />
       </header>
     </div>
   );

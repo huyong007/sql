@@ -1,5 +1,5 @@
 import React from 'react';
-import { bindActionCreator, createStore, bindActionCreators } from 'redux';
+import { createStore, bindActionCreators } from 'redux';
 import { Provider, connect } from 'react-redux';
 
 //store initial state 
@@ -55,8 +55,18 @@ function mapStateToProps(state) {
     };
 }
 
-function mapDispatchToprops(dispatch){
-    return bindActionCreators({plusOne,minusOne},dispatch);
+function mapDispatchToprops(dispatch) {
+    return bindActionCreators({ plusOne, minusOne }, dispatch);
 }
 
-const ConnectedCounter = connect(mapDoprops,mapDispatchToprops)
+const ConnectedCounter = connect(mapStateToProps, mapDispatchToprops)(Counter);
+
+export default class CounterSample extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <ConnectedCounter />
+            </Provider>
+        )
+    }
+}

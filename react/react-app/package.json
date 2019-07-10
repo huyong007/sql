@@ -30,6 +30,7 @@
     ]
   },
   "devDependencies": {
+    "react-redux": "^7.1.0",
     "rekit-core": "^2.3.4",
     "rekit-studio": "^2.4.1"
   }
