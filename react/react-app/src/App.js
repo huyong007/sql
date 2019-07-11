@@ -3,14 +3,18 @@ import './App.css';
 
 import { ThemeContext, themes } from './theme-context';
 import ThemeTogglerButton from './theme-toggler-button';
-import pureRedux from './redux/PureRedux'
+import pureRedux from './redux/PureRedux';
 
-import Counter from './redux/Counter'
+import Counter from './redux/Counter';
+import AsyncAction from './redux/Async/AsyncAction';
+// eslint-disable-next-line
+import ReduxMiddleware from './redux/Async/ReduxMiddleware';
 
 
 
 
 
+// eslint-disable-next-line
 class ToolbarParent extends React.Component {
   constructor(props) {
     super(props);
@@ -90,6 +94,7 @@ function FormattedDate(props) {
     <h2>
       现在时刻{props.date.toLocaleTimeString()}.
       <div>{pureRedux()}</div>
+
     </h2>
   )
 };
@@ -103,6 +108,8 @@ function App() {
       <header className="App-header">
         <Clock name='胡永' />
         <Counter />
+        <div>{ReduxMiddleware()}</div>
+        <div>{AsyncAction()}</div>
       </header>
     </div>
   );

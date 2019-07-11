@@ -24,6 +24,10 @@
   - HOC章节中很多都是看不明白,但是大致的意思是HOC就像一个化妆间,通过这个化妆间的人的某些属性改变了
 - Render Props 这个章节也是看的不是很懂,懵逼程度高于HOC
 - context的使用原理很简单,对于可复用的数据抽离出来形成一个单独的概念context,就像一个方法在整个程序中多次使用就抽离出来,形成一个单独的function进而避免重复劳动
+
+
+### ES6
+- export default本质是将后面的的值赋值给default;
 ### 课程进度
 | 时间      | 大章节目                                                                                                                  | 小章节       | 预算(min) | 实际                       |
 | :-------- | :-----------------------------------------------------------------------------------------------------------------------: | :----------: | :-------: | :------------------------: |
@@ -36,6 +40,7 @@
 | 2019-6-27 | charts:https://medium.com/free-code-camp/introducing-rekit-studio-a-real-ide-for-react-and-redux-development-baf0c99cb542 | rekit demo   | 60        |
 | 2019-6-27 | charts:https://redux.js.org/introduction/getting-started                                                                  | redux        | 60        |
 | 2019-6-27 | charts:https://redux.js.org/introduction/getting-started                                                                  | redux        | 60        | 把老师课程上的代码都敲一遍 |
+| 2019-7-11 | charts:http://es6.ruanyifeng.com/?search=super&x=5&y=9#docs/module                                                                 | es6的模块机制        | 30        | 剩余的看完 |
 
 
 ### Demo 列表
@@ -51,6 +56,7 @@
 * 12 counter：在 React 中使用 Redux
 * 13 async-action：Redux 异步 action，中间件的概念
 * 14 org-action：如何组织 Redux 的 action 和 reducer
+* 
 * 16 router-sample：路由不只是页面切换，更是代码组织方式
 * 17.1 router-params：路由参数定义
 * 17.2 nexted-route：嵌套路由
