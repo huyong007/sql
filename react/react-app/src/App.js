@@ -6,9 +6,8 @@ import ThemeTogglerButton from './theme-toggler-button';
 import pureRedux from './redux/PureRedux';
 
 import Counter from './redux/Counter';
-import AsyncAction from './redux/Async/AsyncAction';
-// eslint-disable-next-line
-import ReduxMiddleware from './redux/Async/ReduxMiddleware';
+
+import ChartTime from './01-07/ChatApp'
 
 
 
@@ -108,8 +107,7 @@ function App() {
       <header className="App-header">
         <Clock name='胡永' />
         <Counter />
-        <div>{ReduxMiddleware()}</div>
-        <div>{AsyncAction()}</div>
+        <ChartTime />
       </header>
     </div>
   );
