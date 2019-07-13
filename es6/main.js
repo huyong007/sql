@@ -1,5 +1,2 @@
-import { counter, inCounter } from './lib';
-console.log(counter);
-inCounter();
-console.log(counter);
-
+import './test';
+import './test2'
