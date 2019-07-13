@@ -1,2 +1,0 @@
-import moduleA from './moduleA';
-
