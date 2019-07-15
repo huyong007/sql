@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ES6</title>
+    <script src="system.js"></script>
+
 </head>
 
 <body>
-    <script type="module" src="./main.js"></script>
+    <script >
+    System.import('./main.js').then(()=>{
+        console.log(new m.q().es6);
+    })
+    </script>
 </body>
 
 </html>

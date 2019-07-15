@@ -1,5 +1,7 @@
-exports.done = false;
-var b = require('./lib-b');
-console.log('在lib-a之中,b.done=%j', b.done);
-exports.done = true;
-console.log('a.js执行完毕');
+import { even } from './lib-b';
+
+export function odd(n) {
+    export function odd(n) {
+        return n !== 0 && even(n - 1);
+    }
+}
