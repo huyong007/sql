@@ -1,11 +1,3 @@
-function C() {
-    this.sum = 0;
-    this.add = function () {
-        this.sum += 1;
-    };
-    this.show = function () {
-        console.log(this.sum);
-    };
+module.exports = () => {
+    console.log('123');
 }
-
-export let c = new C();
