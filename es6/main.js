@@ -1,4 +1,4 @@
-class Point {
+class A {
     constructor() {
         this.p = 'p';
     }
@@ -6,8 +6,8 @@ class Point {
         console.log(this.x, this.y)
     }
 }
-Point.prototype.n = 'n';
-class ColorPoint extends Point {
+A.prototype.n = 'n';
+class B extends A {
     constructor() {
         super();
         this.p = 'q';
@@ -16,7 +16,13 @@ class ColorPoint extends Point {
         console.log(super.p, super.n, 'super.p super.m');
     }
 }
-let cp = new ColorPoint();
-cp.m;
+let cp = new B();
+console.log(B.__proto__ === A, 'B._proto_ === A');
+
+
+console.log(B.prototype.__proto__ === A.prototype, 'B.prototype._proto_ === A.prototype');
+
+
+
 
 
