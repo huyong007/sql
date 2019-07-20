@@ -1,10 +1,12 @@
 'use strict';
 
-var { greet, hello, c } = require('./app');
+var fs = require('fs');
 
-var s = 1;
-
-var a = greet(s);
-var b = hello();
-
-console.log(a + b - c, 'a+b');
+fs.readFile('sample.txt', 'utf-8', function (err, data) {
+    if (err) {
+        console.log(123, '123');
+        console.log(err);
+    } else {
+        console.log(data);
+    }
+});
