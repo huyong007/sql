@@ -44,7 +44,7 @@ function transformDate(params) {
             week = '星期' + e;
         }
     });
-    return list1 = year + '-' + month + '-' + date;
+    return list1 = year + "-" + month + "-" + date;
 }
 
 listDayArray();
