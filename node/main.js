@@ -10,7 +10,7 @@ let fs = require('fs');
 
 function listDayArray() {
     let listDayArray = [];
-    for (let i = 0; i <= 30; i += 1) {
+    for (let i = 0; i <= 29; i += 1) {
         listDayArray.push(nowDay + 86400 * i)
     }
     listDayArray.forEach((nowDay, index) => {
@@ -26,7 +26,7 @@ function reviseDay(nowDay, index, someList) {
         reviseDays.push(list1);
     });
     if (reviseDays.length === 6) {
-        console.log(reviseDays);
+        console.log('"' + someList + '"', ':', reviseDays, ',');
 
     }
 }
@@ -44,7 +44,7 @@ function transformDate(params) {
             week = '星期' + e;
         }
     });
-    return list1 = year + '-' + month + '-' + date + '  ' + week;
+    return list1 = year + '-' + month + '-' + date;
 }
 
 listDayArray();
