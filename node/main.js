@@ -1,28 +1,50 @@
-'use strict';
+let listLength = 30;
 
-var fs = require('fs');
+let nowDay = new Date(new Date().setHours(0, 0, 0, 0)) / 1000;
 
-var ws1 = fs.createWriteStream('output1.txt', 'utf-8');
+let reviseInterval = [0, 2, 4, 7, 15, 30];
 
-ws1.write('使用stream写入文本数据');
+let listObj = {};
 
-ws1.write('END.');
+let fs = require('fs');
 
-ws1.end();
+function listDayArray() {
+    let listDayArray = [];
+    for (let i = 0; i <= 30; i += 1) {
+        listDayArray.push(nowDay + 86400 * i)
+    }
+    listDayArray.forEach((nowDay, index) => {
+        let someList = 'list' + (index + 1);
+        reviseDay(nowDay, index, someList);
+    });
+}
 
-var ws2 = fs.createReadStream('output2.txt');
+function reviseDay(nowDay, index, someList) {
+    let reviseDays = [];
+    reviseInterval.forEach(element => {
+        let list1 = transformDate(new Date((86400 * element + nowDay) * 1000));
+        reviseDays.push(list1);
+    });
+    if (reviseDays.length === 6) {
+        console.log(reviseDays);
 
-// ws2.write(new Buffer('使用Stream写入二进制数据。。。\n', 'utf-8'));
+    }
+}
 
-// ws2.write(new Buffer('END', 'utf-8'));
+function transformDate(params) {
+    let list1;
+    let year = params.getFullYear();
+    let month = params.getMonth() + 1;
+    let date = params.getDate();
+    let week = params.getDay();
 
-// ws2.end();
+    let weekArray = ['日', '一', '二', '三', '四', '五', '六'];
+    weekArray.forEach((e, index) => {
+        if (index === week) {
+            week = '星期' + e;
+        }
+    });
+    return list1 = year + '-' + month + '-' + date + '  ' + week;
+}
 
-var rs = fs.createReadStream('sample.txt');
-
-var ws = fs.createWriteStream('copied.txt');
-
-rs.pipe(ws, { end: false });
-
-
-
+listDayArray();
