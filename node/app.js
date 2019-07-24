@@ -1,17 +1,28 @@
-'use strict'
+function mix(...minxins) {
+    class Mix {
+        constructor() {
+            for (let mixin of minxins) {
+                copyProperties(this, new mixin());
+            }
+        }
+    }
 
-var a = 'hello';
+    for (let mixin of mixins) {
+        copyProperties(Mix, mixin);
+        copyProperties(Mix.prototype, mixin.prototype);
+    }
 
-
-function hello() {
-    return 9;
-
+    return Mix;
 }
-function greet(name) {
-    return name;
 
+function copyProperties(target, source) {
+    for (let key of Reflect.ownKeys(source)) {
+        if (key !== 'constructor'
+            && key !== 'prototype'
+            && key !== 'name'
+        ) {
+            let desc = Object.getOwnPropertyDescriptor(source, key);
+            Object.defineProperty(target, key, desc);
+        }
+    }
 }
-
-module.exports.c = 10;
-exports.hello = hello;
-exports.greet = greet;
