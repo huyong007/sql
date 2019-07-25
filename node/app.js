@@ -1,28 +1,8 @@
-function mix(...minxins) {
-    class Mix {
-        constructor() {
-            for (let mixin of minxins) {
-                copyProperties(this, new mixin());
-            }
-        }
-    }
+(function (a) {
+    var a = 10;
+    console.log(a, 'a');
 
-    for (let mixin of mixins) {
-        copyProperties(Mix, mixin);
-        copyProperties(Mix.prototype, mixin.prototype);
-    }
+}());
 
-    return Mix;
-}
 
-function copyProperties(target, source) {
-    for (let key of Reflect.ownKeys(source)) {
-        if (key !== 'constructor'
-            && key !== 'prototype'
-            && key !== 'name'
-        ) {
-            let desc = Object.getOwnPropertyDescriptor(source, key);
-            Object.defineProperty(target, key, desc);
-        }
-    }
-}
+console.log(a, 'a 外部');
