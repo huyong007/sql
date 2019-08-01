@@ -1,12 +1,10 @@
-var x = 100;
 
-function calculate(p = x + 1) {
-    console.log(p, 'p');
+
+var fun = function (a, b, c = 1) {
+    console.log(a, b, c, 'a,b,c');
 
 }
 
+console.log(fun.length, 'fun.length');
 
-calculate();
 
-var  x = 20;
-calculate();
