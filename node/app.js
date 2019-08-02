@@ -1,10 +1,20 @@
+function add(...values) {
+    let sum = 0;
+    let inSum = 0;
+    for (var val of values) {
+        console.log(val, 'val');
 
+        sum += val;
+    }
+    for (var key in values) {
+        console.log(key, 'key');
+        console.log(typeof key, 'key typeof string');
 
-var fun = function (a, b, c = 1) {
-    console.log(a, b, c, 'a,b,c');
+        inSum += +key;
+    }
+    console.log(sum, 'sum');
+    console.log(inSum, 'inSum');
 
 }
 
-console.log(fun.length, 'fun.length');
-
-
+add(2, 5, 3);
