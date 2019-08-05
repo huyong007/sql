@@ -1,10 +1,12 @@
-- 网络知识
 - 浏览器知识
-- css知识
-- ps知识
-- react知识(6/18-9/18),准备学完react教程
-- pwa知识
-- swift UI知识
-- go知识
-- 计算机英语:单词强记
 - babel wabpack知识:教程:https://juejin.im/post/5c622eddf265da2de04a9891
+- algorithm
+- winter front-end
+- Network protocol
+- react
+- node
+- es6
+- typescript
+- css
+- html
+- front-end-performance-checkList
