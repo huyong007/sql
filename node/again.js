@@ -12,7 +12,7 @@ function tco(f) {
                 value = f.apply(this, accumulated.shift());
             }
             active = false;
-             return value;
+            return value;
 
         }
     };
@@ -22,10 +22,10 @@ var sum = tco(function (x, y) {
     if (y > 0) {
         return sum(x + 1, y - 1)
     } else {
-        console.log('x',x);
-        
         return x
     }
 });
 
 sum(1, 100000);
+
+// 上述是ES6函数的尾调函数针对的用法，没看懂
