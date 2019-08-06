@@ -1,12 +1,22 @@
-- 浏览器知识
-- babel wabpack知识:教程:https://juejin.im/post/5c622eddf265da2de04a9891
-- algorithm
-- winter front-end
-- Network protocol
-- react
-- node
-- es6
-- typescript
-- css
-- html
-- front-end-performance-checkList
+|时间|react|node|es6|typescript|css|html|
+| :--:| :-- | :--:|  :-- | :--:|  :-- | :--:| 
+
+
+|时间|babel/wabpack|performance|winter/front-end|
+| :--:| :-----------: | :-----------: | :-----------:  |
+
+
+|时间| browser | algorithm | Network-protocol | english |
+| :--:| :-----: | :-------: | :--------------: | :-----: |  
+
+
+|时间| 计算机组成和系统结构 | 操作系统 | 计算机网络 | 编译原理 |
+| :--:| :-----: | :-------: | :--------------: | :-----: |  
+
+
+### 网络协议学习心得
+- 使用那个知识图谱，没事就看看
+- 用window电脑找一个空余时间把实验给搭建起来
+- 文字和音频都要学习，文字听一遍，音频在学习之后听一遍
+- 老师给的第一个问题思考之后作答，第二个问题思考，答案就是第二讲
+- 实践就是使用老师给搭建的那个环境抓包看看
