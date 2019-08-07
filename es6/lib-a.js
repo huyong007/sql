@@ -1,7 +1,18 @@
-import { even } from './lib-b';
 
-export function odd(n) {
-    export function odd(n) {
-        return n !== 0 && even(n - 1);
-    }
-}
+
+const go = function* () {
+    yield 1;
+    yield 2;
+    yield 3;
+};
+
+console.log([...go()], '[...go()]');
+
+
+
+const obj = {a:1,b:2};
+
+let arr = [...obj];
+
+console.log(arr,'arr');
+ 
