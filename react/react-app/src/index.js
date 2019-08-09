@@ -14,7 +14,7 @@ import jsx from './course/jsx'
 ReactDOM.render(<App />, document.getElementById('thinkingInReact'));
 
 ReactDOM.render(
-    <jsx.BigWelcome />,
+    jsx.Tick,
     document.getElementById('course')
 )
 

@@ -1,22 +1,23 @@
 
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 
 
-function Welcome(props) {
-    return <h1>hello,{props.name}</h1>;
-}
-
-const element = <Welcome name='Sara' />;
-
-function BigWelcome() {
+function Clock(props) {
     return (
         <div>
-            <Welcome name='Sara' />
-            <Welcome name='Cahal' />
-            <Welcome name='Sara' />
+            <h1>hello,world!</h1>
+            <h2>It is {props.date.toLocaleTimeString()}.</h2>
         </div>
     )
 }
 
-export default { element, BigWelcome };
+function Tick() {
+    ReactDOM.render(
+        <Clock date={new Date()} />,
+        document.getElementById('course')
+    )
+}
+
+setInterval(Tick, 1000);
+export default { Tick };
