@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import element from './course/jsx'
+import jsx from './course/jsx'
 
 
 
@@ -14,7 +14,7 @@ import element from './course/jsx'
 ReactDOM.render(<App />, document.getElementById('thinkingInReact'));
 
 ReactDOM.render(
-    element,
+    <jsx.BigWelcome />,
     document.getElementById('course')
 )
 

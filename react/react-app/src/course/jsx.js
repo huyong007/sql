@@ -9,4 +9,14 @@ function Welcome(props) {
 
 const element = <Welcome name='Sara' />;
 
-export default element;
+function BigWelcome() {
+    return (
+        <div>
+            <Welcome name='Sara' />
+            <Welcome name='Cahal' />
+            <Welcome name='Sara' />
+        </div>
+    )
+}
+
+export default { element, BigWelcome };
