@@ -3,7 +3,8 @@ import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
 import Index from './pages/index'
-
+import Personal from './pages/personal'
+import Article from './pages/article'
 import configStore from './store'
 
 import './app.scss'
@@ -20,7 +21,9 @@ class App extends Component {
 
   config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/article/article',
+      'pages/personal/personal',
     ],
     window: {
       backgroundTextStyle: 'light',
