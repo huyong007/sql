@@ -1,18 +1,17 @@
 
 
-const go = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+const proto = {
+    foo: 'hello'
 };
 
-console.log([...go()], '[...go()]');
+const obj = {
+    foo: 'world',
+    find() {
+        console.log(super.foo, 'super.foo');
+        super.foo;
+    }
+};
 
+Object.setPrototypeOf(obj, proto);
 
-
-const obj = {a:1,b:2};
-
-let arr = [...obj];
-
-console.log(arr,'arr');
- 
+obj.find();
