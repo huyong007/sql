@@ -1,6 +1,6 @@
 const config = {
-  projectName: 'aqqcx',
-  date: '2019-8-10',
+  projectName: 'aqq',
+  date: '2019-8-13',
   designWidth: 750,
   deviceRatio: {
     '640': 2.34 / 2,

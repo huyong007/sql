@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "aqqcx",
-  "description": "安全期查询",
+  "projectname": "aqq",
+  "description": "aqqcx",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
