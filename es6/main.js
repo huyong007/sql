@@ -1,26 +1,16 @@
-class A {
-    constructor() {
-        this.p = 'p';
-    }
-    print() {
-        console.log(this.x, this.y)
-    }
-}
-A.prototype.n = 'n';
-class B extends A {
-    constructor() {
-        super();
-        this.p = 'q';
-    }
-    get m() {
-        console.log(super.p, super.n, 'super.p super.m');
-    }
-}
-let cp = new B();
-console.log(B.__proto__ === A, 'B._proto_ === A');
+let a = { b: 'c' }
+// 改变一个对象的属性可以使用扩展运算符，也可以使用
+Object.assign(a,
+    Object.defineProperty({}, 'invisiable', {
+        enumerable: true,
+        value: 'hello'
+    })
+);
 
+console.log(a, 'a');
 
-console.log(B.prototype.__proto__ === A.prototype, 'B.prototype._proto_ === A.prototype');
+Object.
+console.log(a,'a');
 
 
 
