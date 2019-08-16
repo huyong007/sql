@@ -1,18 +1,24 @@
-let a = { b: 'c' }
-// 改变一个对象的属性可以使用扩展运算符，也可以使用
-Object.assign(a,
-    Object.defineProperty({}, 'invisiable', {
-        enumerable: true,
-        value: 'hello'
-    })
-);
+// let mix = (object) => ({
+//     with: (...mixins) => mixins.reduce(
+//         (c, mixin) => Object.create(
+//             c, Object.getOwnPropertyDescriptors(mixin)
+//         ), object)
+// });
 
-console.log(a, 'a');
+// let a = { a: 'a' };
 
-Object.
-console.log(a,'a');
+// let b = { b: 'b' };
+
+// let c = { c: 'c' };
+
+// let d = mix(c).with(a, b);
+
+// console.log(d.c,'d');
 
 
+let s = Symbol('傻逼');
+let s1 = Symbol('clearn');
 
-
+console.log(s, ' s');
+console.log(s1, ' s1');
 
