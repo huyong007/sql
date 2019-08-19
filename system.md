@@ -36,6 +36,7 @@
 - 总结起来：es6或者是css是深入学习，属于进阶方向，面临的问题是如何高效的学习，并学以致用；node这种是从零开始的学习，属于起步方向，面临的问题是：如何更快的上手；而学过之后的再使用属于如何保持快速回忆能够尽快用起来，
 ### css学习总结
 - #ffffff是十六进制的颜色表示方法，其中前两位是从00到ff以此类推，分别表示red，green，blue；
+- css看到了伪元素，first-letter
 
 ### react学习进度和总结
 - http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html   目前在看reduce的ryf的文章
