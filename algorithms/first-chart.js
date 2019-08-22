@@ -22,20 +22,31 @@ for (let j = array.length - 1; j >= 0; j--) {
 }
 
 // 冒泡排序算法
-let t;
-let a = [1, 9, 4, 8, 7];
-let n = a.length;
 
-for (let i = 1; i <= n - 1; i++) {
-    for (let j = 1; j <= n - i; j++) {
-        console.log(a[j + 1], 'a[j+1]');
+let b = [1, 9, 4, 8, 7];
+let arr = [1, 4, 9, 5, 2]
+function bubble(arr) {
+    let t;
+    let a = [];
+    let n = arr.length;
+    for (let i = 1; i <= n; i++) {
+        a[i] = arr[i - 1];
+    }
+    console.log(a, 'a');
 
-        if (a[j] < a[j + 1]) {
-            t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+    for (let i = 1; i <= n - 1; i++) {
+        for (let j = 1; j <= n - i; j++) {
+            console.log(a[j + 1], 'a[j+1]');
+            if (a[j] < a[j + 1]) {
+                t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;
+            }
         }
+    }
+
+    for (let i = 1; i <= n; i++) {
+        console.log(a[i], 'a[i]');
     }
 }
 
-for (let i = 0; i <= n-1; i++) {
-    console.log(a[i], 'a[i]');
-}
+bubble(arr);
+bubble(b);
