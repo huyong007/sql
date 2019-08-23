@@ -1,17 +1,8 @@
-
-
-const proto = {
-    foo: 'hello'
-};
-
-const obj = {
-    foo: 'world',
-    find() {
-        console.log(super.foo, 'super.foo');
-        super.foo;
+function entried(obj) {
+    for(let [k,v] of Object.entries(obj)){
+        console.log(`${JSON.stringify(k)}:${JSON.stringify(v)}`);
+        
     }
-};
+}
 
-Object.setPrototypeOf(obj, proto);
-
-obj.find();
+entried({ a: 1, b: 3, c: { a: { b: 4 } } });
