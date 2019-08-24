@@ -1,24 +1,13 @@
-// let mix = (object) => ({
-//     with: (...mixins) => mixins.reduce(
-//         (c, mixin) => Object.create(
-//             c, Object.getOwnPropertyDescriptors(mixin)
-//         ), object)
-// });
+const s = new Set();
+[2, 3, 4, 5, 6, 2, 3, 2, 2, 1, 1].forEach(x => s.add(x));
 
-// let a = { a: 'a' };
+for (let i of s) {
+    console.log(i, 'i');
 
-// let b = { b: 'b' };
+}
 
-// let c = { c: 'c' };
-
-// let d = mix(c).with(a, b);
-
-// console.log(d.c,'d');
-
-
-let s = Symbol('傻逼');
-let s1 = Symbol('clearn');
-
-console.log(s, ' s');
-console.log(s1, ' s1');
+console.log(s.size ,'s.size ');
+console.log(s.has(1),'s.has(1)');
+console.log(s.delete(1),'s.delete(1)');
+console.log(s.clear())
 
