@@ -40,3 +40,6 @@
 
 ### react学习进度和总结
 - http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html   目前在看reduce的ryf的文章
+
+### typescript 
+- https://juejin.im/post/59c46bc86fb9a00a4636f939 typescript的介绍文章，阿里出品，论证项目可行性
