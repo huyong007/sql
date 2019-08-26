@@ -9,3 +9,4 @@ let obj = { length: 2 };
 Array.from(obj, () => 3);
 
 console.log(obj,'obj');
+// reflect 概述
