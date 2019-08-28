@@ -1,12 +1,25 @@
-let set = new Set([1, 2, 3]);
+const a = new Promise(function (resolve, reject) {
+    setTimeout(() => reject(new Error('fail1')), 3000)
+})
 
-set = new Set(Array.from(set, val => val * 2));
+const p1 = new Promise(function (resolve, reject) {
+    setTimeout(() => reject(new Error('fail2')), 3000)
+})
 
-console.log(set, 'set');
+const b = new Promise(function (resolve, reject) {
+    setTimeout(() => resolve(p1), 1000);
+})
 
-let obj = { length: 2 };
+b
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
 
-Array.from(obj, () => 3);
 
-console.log(obj,'obj');
-// reflect 概述
+
+const p2 = new Promise(function (resolve, reject) {
+    setTimeout(() => resolve(a), 1000)
+})
+
+p2
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
