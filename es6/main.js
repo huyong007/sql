@@ -1,38 +1,33 @@
-var it = makeIterator(['a', 'b']);
-
-console.log(it.next(), 'it.next()');
-console.log(it.next(), 'it.next()');
-console.log(it.next(), 'it.next()');
-
-
-
-
-function makeIterator(array) {
-    var nextIndex = 0;
-    return {
-        next: function () {
-            return nextIndex < array.length ?
-                { value: array[nextIndex++], done: false } :
-                { value: undefined, done: true };
-        }
-    };
+function Obj(value) {
+    this.value = value;
+    this.next = null;
 }
 
-const obj = {
-    1: 9,
-    2: 10,
-    [Symbol.iterator]: function () {
-        return {
-            next: function () {
-                return {
-                    value: 1,
-                    done: true
-                }
-            }
+Obj.prototype[Symbol.iterator] = function () {
+    var iterator = { next: next };
+    var current = this;
+    function next() {
+        if (current) {
+            var value = current.value;
+            current = current.next;
+            return { done: false, value: value };
+        } else {
+            return { done: true };
         }
     }
+    return iterator;
 }
 
-for (i in obj) {
-    console.log(i, obj[i], 'i,obj[i]');
+var one = new Obj(1);
+
+var two = new Obj(2);
+
+var three = new Obj(3);
+
+one.next = two;
+two.next = three;
+
+for (var i of one) {
+    console.log(i, 'i');
+
 }
