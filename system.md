@@ -48,6 +48,11 @@
 
 ### typescript 
 - https://juejin.im/post/59c46bc86fb9a00a4636f939 typescript的介绍文章，阿里出品，论证项目可行性
+- 泛型如Array<string>;
+- interface 如果一个实现了一个接口，必须实现接口中的方法实现使用implements
+- 继承extends中父类中的protocal命名的方法或者是属性只能在子类中使用
+- 注解是某些框架规定的解释，比如@component在angular框架中如果实现了一个组件，这个注解表达的意思是需要在实现该组件中参数可以这样理解
+- 如果我们需要使用Jquery在ts中，就需要是用fileName.d.ts中对文件进行定义，这样的文件叫做类型定义文件
 
 
 ###  数据结构和算法
