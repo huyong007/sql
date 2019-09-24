@@ -1,0 +1,44 @@
+body {
+    font: 16px "Comic Sans MS", cursive;
+    background: url("./images/Blue-rule.png");
+}
+
+strong {
+    color: #ff0000;
+    font-size: 2em;
+}
+
+.carrot {
+    color: #3745586e;
+}
+
+.spinach {
+    color: green;
+}
+
+#first {
+    font-style: italic;
+}
+
+#second,
+#first {
+    color: blue;
+}
+
+#first::after {
+    font-weight: bold;
+    color: navy;
+    content: "Over: ";
+}
+
+#second::before {
+    font-weight: bold;
+    color: navy;
+    content: "Reference     :      ";
+}
+
+div:before {
+    content: counter(mynum) ": ";
+    counter-increment: mynum;
+    font-weight: bold;
+}
