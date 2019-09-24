@@ -27,10 +27,15 @@
 - 背景色可以设置 transparent 属性来移除掉所有的颜色，呈现出父元素的背景色
 - CSS可以在元素的前后插入文本：在选择器的后面加上::before 或者 ::after 。在声明中，指定 content 属性，并设置文本内容
 - 内边距总是跟元素的背景色一样，所以当你设置背景色时，你会发现背景色在元素本身和内边距上都生效了。外边距总是透明的。
+- 边框颜色为 transparent 来让边框不可见，后者不会改变布局
 
 
 ### 进度
-- 层叠和样式：
+- css基础学习（教程一）：
   + https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks
-  + https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_Started/Boxes
+  + https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Tables
+- css基础学习（教程二）：
+  + https://learn.shayhowe.com/html-css/positioning-content/
+- css进阶学习：
+  + http://zh.learnlayout.com/
   
