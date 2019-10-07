@@ -32,7 +32,7 @@
 
 ### 进度
 - css基础学习（教程一）：
-  + https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks
+  + https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables
   + https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Tables
 - css基础学习（教程二）：
   + https://learn.shayhowe.com/html-css/positioning-content/
