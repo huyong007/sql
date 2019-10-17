@@ -58,6 +58,7 @@
 - 继承extends中父类中的protocal命名的方法或者是属性只能在子类中使用
 - 注解是某些框架规定的解释，比如@component在angular框架中如果实现了一个组件，这个注解表达的意思是需要在实现该组件中参数可以这样理解
 - 如果我们需要使用Jquery在ts中，就需要是用fileName.d.ts中对文件进行定义，这样的文件叫做类型定义文件
+- 可索引的类型，地址：https://www.tslang.cn/docs/handbook/interfaces.html
 
 
 ###  数据结构和算法
