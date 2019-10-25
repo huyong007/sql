@@ -1,17 +1,9 @@
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-var twoSum = function (nums, target) {
-    let map = new Map();
-    for (let i = 0; i < nums.length ; i++) {
-        if (map.has(target - nums[i])) {
-            return [map.get(target - nums[i]), i]
-        } else {
-            map.set(nums[i], i);
-        }
-    }
-};
 
-twoSum([3, 2, 4], 6);
+
+// s[i].charCodeAt()-aCode
+let s = 'abcdefg';
+let aCode = 'a'.charCodeAt(0);
+console.log(aCode,'aCode');
+console.log(s.charCodeAt(0),'charAt');
+console.log(s.charCodeAt(1),'charAt');
+console.log(s.charCodeAt(2),'charAt');
