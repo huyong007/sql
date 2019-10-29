@@ -1,23 +1,24 @@
 /**
  * @param {number} n
- * @return {string[]}
+ * @return {number}
  */
-var generateParenthesis = function (n) {
-    let arrList = [];
-    function generate(left, right, n, s) {
-        if (left === n && right === n) {
-            arrList.push(s);
-            console.log(s, left, right, 's2');
-            return;
-        }
-        console.log(s, left, right, 's1');
-
-        if (left < n) generate(left + 1, right, n, s + '(');
-        if (left > right) generate(left, right + 1, n, s + ')');
+var climbStairs = function (s) {
+    if (s.length === 0 || s.length === 1) {
+        return true;
     }
-    console.log('s3');
-    generate(0, 0, n, '');
-    return arrList;
+    let arrS = s.split('');
+    return recurFun(0, n - 1, arrS);
 };
 
-generateParenthesis(3);
+function recurFun(left, right, arrS) {
+    if (left === right) {
+        return true;
+    }
+    if (arrS[left] === arrS[right]) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
