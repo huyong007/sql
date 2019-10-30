@@ -1,8 +1,8 @@
 
 
-console.log(9%10,'9%10');
+console.log(~~(9 / 2), '9%10');
 
-var fun = function(){
+var fun = function () {
     let i = 10;
-    
+
 }
