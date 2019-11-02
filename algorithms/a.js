@@ -1,23 +1,27 @@
 /**
- * @param {number} x
- * @param {number} n
- * @return {number}
+ * @param {number[]} nums
+ * @return {number[][]}
  */
-var myPow = function (x, n) {
-    if (n === 0) return 1;
-    if (n === 1) return x;
-    if (n < 0) {
-        return myPow(1 / x, -n)
-    }
-    let half = Math.floor(n / 2);
-    let resualt = myPow(x, half);
-   
-    if (n % 2 === 0) {
-        return resualt = resualt * resualt;
-    } else {
-        return resualt = resualt * resualt * x;
-    }
-
-
+var subsets = function (nums) {
+    let resualtList = new Array();
+    if (nums === null) return resualtList;
+    recurFun(resualtList, nums, [], 0);
+    return;
 };
-myPow(2, 10);
+
+function recurFun(resualtList, nums, list, index) {
+    // terminator
+    if (index === nums.length) {
+        resualtList.push([list]);
+        return;
+    }
+    // not pick the number at this index
+    recurFun(resualtList, nums, list, index + 1);
+    list.push(nums[index]);
+    // pick the number at this index
+    recurFun(resualtList, nums, list, index + 1);
+    // reverse the current state 
+    list.splice(list.length - 1, 1);
+}
+
+subsets([1,2,3]);
