@@ -1,21 +1,31 @@
 /**
- * @param {number} x
- * @return {number}
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
  */
-var mySqrt = function (x) {
-    if (x == 0 || x == 1) {
-        return x;
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var levelOrder = function(root) {
+    if(!root || root.length == 0){
+        return [];
     }
-    var tmp = x;
-    function sqrt(x) {
-        var sqrtx = (x + tmp / x) / 2;
-        if (sqrtx == x) {
-            return Math.floor(x);
-        } else {
-            return sqrt(sqrtx);
+    var result = [];
+    function dfs(currNode,level){
+        if(currNode != null){
+            (!result[level]) && (result[level] = []);
+            result[level].push(currNode.val);
+            if(currNode.left != null){
+                dfs(currNode.left,level+1);
+            }
+            if(currNode.right != null){
+                dfs(currNode.right,level+1);
+            }           
         }
     }
-    return sqrt(x);
+    dfs(root,0);
+    return result;
 };
-
-mySqrt(10);
