@@ -10,14 +10,16 @@
 </head>
 
 <body>
-    <div id='first'></div>
+    <button id='first'></button>
 </body>
 <script>
-    function test(a, b, ...c) {
-        console.log(a, b, c, 'a,b,c');
+    function Button() {
+        this.click = false;
+        this.click = ()=>{
+            this.click = true;
+            assert(button.clicked,'this.button has been clicked');
+        };
     }
-    test(1, 2, 3, 4, 5);
-    test();
 </script>
 
 </html>
