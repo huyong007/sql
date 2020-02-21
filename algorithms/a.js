@@ -1,57 +1,19 @@
 /**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * 
+ * @param {number} n
+ * @return {number}
  */
-/**
- * @param {TreeNode} root
- * @return {number[]}
- */
-二叉树的前序遍历
-var preorderTraversal = function(root) {
-    let resualtArray =[];
-    function preorder(root){
-        if(root!==null){
-            resualtArray.push(root.val);
-            if(root.left!==null){
-                preorder(root.left);
-            }
-            if(root.right!==null){
-                preorder(root.right);
-            }
+var climbStairs = function (n) {
+    let arrList = [];
+    function generate(left, right, n, s) {
+        if (left === n && right === n) {
+            arrList.push(s);
+            return;
         }
+        if (left < n) generate(left + 1, right, n, s + '(');
+        if (left > right) generate(left, right + 1, n, s + ')');
     }
-    preorder(root);
-    return resualtArray;
+    generate(0, 0, n, '');
+    return arrList;
 };
-二叉树的中序遍历
-/**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number[]}
- */
-var inorderTraversal = function(root) {
-    let resualtArray = [];
-    function checkRoot(root) {
-        if (root !== null) {
-            if (root.left !== null) {
-                checkRoot(root.left);
-            }
-            resualtArray.push(root.val);
-            if (root.right !== null) {
-                checkRoot(root.right);
-            }
-        }
 
-    }
-    checkRoot(root);
-    return resualtArray;
-};
+climbStairs(3);
