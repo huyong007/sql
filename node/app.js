@@ -1,5 +1,13 @@
-let array = [];
-for (let i = 0; i < 181; i++) {
-    array.push((50 + i) + '');
-};
-console.log(array);
+function Ninja() {
+  var feints = 0;
+  this.getFeints = function() {
+    return feints;
+  };
+  this.feint = function() {
+    feints++;
+  };
+}
+
+
+var ninja = new Ninja();
+console.log(ninja.feints,'ninja.feints');

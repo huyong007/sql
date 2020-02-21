@@ -1,0 +1,942 @@
+/*rest*/
+
+/*@charset 'UTF-8';*/
+
+a,
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 14px;
+}
+
+li,
+ol,
+ul {
+  list-style: none outside none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+body {
+  font-family: arial, Microsoft YaHei PingFangSC-Regular, HelveticaNeue-Light,
+    "Helvetica Neue Light", "Microsoft YaHei", sans-serif;
+  text-align: left;
+  color: #333;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+input::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+a img {
+  border: none;
+}
+
+a,
+a:link,
+a:active {
+  text-decoration: none;
+  outline: 0;
+}
+
+a {
+  color: #333333;
+}
+
+/* a:hover{color: rgba(30, 136, 255, 1);} */
+
+textarea {
+  font: 14px/1.8 Microsoft YaHei PingFangSC-Regular, HelveticaNeue-Light,
+    "Helvetica Neue Light", "Microsoft YaHei", sans-serif;
+  resize: none;
+  outline: 0;
+}
+
+select {
+  font-family: Microsoft YaHei PingFangSC-Regular, HelveticaNeue-Light,
+    "Helvetica Neue Light", "Microsoft YaHei", sans-serif;
+}
+
+button,
+input {
+  font-family: Microsoft YaHei PingFangSC-Regular, HelveticaNeue-Light,
+    "Helvetica Neue Light", "Microsoft YaHei", sans-serif;
+  border: none;
+  outline: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+cite,
+em,
+i {
+  font-style: normal;
+  font-weight: normal;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #c3c3c3;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #c3c3c3;
+}
+
+p {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+/*取消div标签在移动端点击以后的高亮效果*/
+
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+/*兼容版本的弹性盒子写法*/
+
+.flex {
+  display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+}
+
+/*垂直居中*/
+
+.flex-box {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+/*均匀分列每个子集元素间距*/
+
+.flex-justify {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/*水平居中*/
+
+.flex-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/*弹性盒子剩余的宽度*/
+.flex-one {
+  flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
+}
+
+/*设置子集元素垂直排列兼容*/
+
+.flex-direction {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-box-orient: vertical;
+}
+/*定位居中*/
+.position-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+/*超出显示1行*/
+.display-row1 {
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+/*超出显示两行*/
+.display-row2 {
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+/*超出显示两行*/
+.display-row4 {
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+/*单行溢出以点显示*/
+.one-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*两行溢出以点显示*/
+.two-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+/*三行溢出以点显示*/
+.three-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.dot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+html {
+  min-width: 1200px;
+}
+
+/* .img-fixed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    min-width: 1080px;
+}
+
+.container-center {
+    width: 1080px;
+    margin: 0 auto;
+    height: inherit;
+}
+
+.container {
+    width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+} */
+
+/* 头部 */
+.header {
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(244, 244, 244, 1);
+  z-index: 11;
+}
+.headerFix {
+  position: fixed;
+  top: 0;
+  z-index: 12;
+  box-shadow: 0 0 6px #999;
+}
+.header-con,
+.nav-con {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header .login .line {
+  color: rgba(221, 221, 221, 1);
+}
+.header .header-con .currentWeb {
+  background-color: #fff;
+}
+.header .header-con .selectWeb a {
+  width: 116px;
+  text-align: center;
+}
+.header a:hover {
+  color: rgba(30, 136, 255, 1);
+}
+.selectWeb a,
+.login a {
+  display: inline-block;
+  color: rgba(102, 102, 102, 1);
+}
+.selectWeb span,
+.login span {
+  margin: 0 15px;
+}
+.login .noLogin {
+  display: none;
+}
+.login .hasLogin {
+  /* display: none; */
+  position: relative;
+  line-height: 40px;
+  cursor: pointer;
+}
+.login .hasLogin span {
+  margin: 0 0 0 10px;
+}
+.login .hasLogin .haslogin-title {
+  position: relative;
+}
+.login .hasLogin img {
+  position: relative;
+  top: -2px;
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+.login .hasLogin .hasLogin-logo {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: -56px;
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  z-index: 11;
+}
+.login .hasLogin:hover .hasLogin-content{
+  display: block;
+}
+.login .hasLogin:hover .hasLogin-title img{
+  display: none;
+}
+.login .hasLogin:hover .hasLogin-title .hasLogin-logo{
+  display: inline-block;
+}
+.login .hasLogin .hasLogin-content {
+  display: none;
+  position: absolute;
+  right: -30px;
+  width: 310px;
+  height: 230px;
+  padding-top: 40px;
+  text-align: center;
+  background-color: rgba(244, 244, 244, 1);
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1),
+              5px 0 3px -1px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.login .hasLogin-content p {
+  font-size: 18px;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height: 1;
+}
+.login .hasLogin-content a {
+  display: inline-block;
+  font-size:14px;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  /* line-height:48px; */
+}
+.login .hasLogin-content a span {
+  margin-right: 5px;
+}
+.login .hasLogin-content .goPage {
+  position: relative;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+.login .hasLogin-content .goPage i{
+  display: block;
+  height: 20px;
+  font-size: 20px;
+  color: rgba(153, 153, 153, 1);
+  margin-bottom: 10px;
+}
+.login .hasLogin-content .goPage::after {
+  content: '';
+  width:1px;
+  height:32px;
+  background:rgba(227,227,227,1);
+  position: absolute;
+  right: -15px;
+  top: 5px;
+}
+.login .hasLogin-content .goPage.myShelf {
+  margin-right: 0;
+}
+.login .hasLogin-content .goPage.myShelf::after {
+  content: '';
+  width: 0;
+}
+.login .hasLogin-content .goPage span{
+  display: block;
+  margin-right: 0;
+  position: relative;
+  left: 10px;
+}
+.login .hasLogin-content .goPage:hover {
+  color: rgba(42, 125, 218, 1);
+}
+.login .hasLogin-content .goPage:hover i{
+  color: rgba(42, 125, 218, 1);
+}
+.login .hasLogin-content .btn-goCharge {
+  width: 180px;
+  height: 32px;
+  background:rgba(42,125,218,1);
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color:rgba(255,255,255,1);
+}
+.login .hasLogin-content .btn-goCharge:hover {
+  background:rgba(30, 136, 255, 1);
+}
+.login .hasLogin-content .quit {
+  font-size:12px;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.login .hasLogin-content .quit span {
+  position: relative;
+  top: -1px;
+}
+.login .hasLogin-content .quit:hover {
+  color:rgba(102,102,102,1);
+}
+.nav {
+  /* position: fixed;
+  top: 40px; */
+  width: 100%;
+  height: 72px;
+  /* line-height: 72px; */
+  background-color: #fff;
+  z-index: 20;
+  border-bottom: 1px solid rgba(227, 227, 227, 1);
+}
+.nav li:hover a {
+  color: rgba(30, 136, 255, 1);
+}
+.search {
+  margin-top: 13px;
+  width: 320px;
+  position: relative;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 20px;
+  border-radius: 21px;
+  border: none;
+  border: 2px solid rgba(19, 160, 255, 1);
+  box-sizing: border-box;
+}
+.search::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  width: 50px;
+  height: 42px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: rgba(26, 146, 255, 1);
+}
+.search input {
+  position: relative;
+  /* top: 1px; */
+  width: 240px;
+  height: 34px;
+  font-size: 16px;
+}
+.search img {
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  z-index: 3;
+  cursor: pointer;
+}
+.logo {
+  margin-top: 18px;
+  margin-right: 80px;
+}
+.nav-con li a {
+  display: inline-block;
+  height: 72px;
+  font-size: 20px;
+  line-height: 72px;
+  box-sizing: border-box;
+}
+.nav-con ul li {
+  float: left;
+  margin-right: 45px;
+}
+.nav-con ul li.current a {
+  font-weight: 700;
+  border-bottom: 2px solid rgba(30, 136, 255, 1);
+  font-size: 22px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  color: rgba(51, 51, 51, 1);
+  font-family: "Microsoft YaHei";
+}
+
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1596813 */
+  src: url('https://at.alicdn.com/t/font_1596813_a5co5rc5u8i.eot');
+  src: url('https://at.alicdn.com/t/font_1596813_a5co5rc5u8i.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1596813_a5co5rc5u8i.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1596813_a5co5rc5u8i.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1596813_a5co5rc5u8i.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1596813_a5co5rc5u8i.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-person::before {
+  content: '\e600';
+}
+.icon-zuijin::before {
+  content: '\e685';
+}
+.icon-shelf::before {
+  content: '\e610';
+}
+/* index */
+.my-icon {
+  background: url(../imgs/index_sprites.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bg-arrow_ckgd {
+  width: 20px;
+  height: 20px;
+  background-position: -170px -155px;
+}
+
+.bg-decoration_xssj {
+  width: 73px;
+  height: 70px;
+  background-position: -10px -10px;
+}
+
+.bg-eye {
+  width: 14px;
+  height: 8px;
+  background-position: -103px -71px;
+}
+
+.bg-icon_gonggao {
+  width: 24px;
+  height: 20px;
+  background-position: -126px -155px;
+}
+
+.bg-icon_kongbu {
+  width: 64px;
+  height: 35px;
+  background-position: -10px -100px;
+}
+
+.bg-icon_search {
+  width: 24px;
+  height: 24px;
+  background-position: -82px -155px;
+}
+
+.bg-icon_VIP {
+  width: 30px;
+  height: 14px;
+  background-position: -179px -117px;
+}
+
+.bg-icon_wangyou {
+  width: 52px;
+  height: 36px;
+  background-position: -10px -155px;
+}
+
+.bg-icon_xianxia {
+  width: 59px;
+  height: 33px;
+  background-position: -179px -64px;
+}
+
+.bg-icon_xuahuan {
+  width: 64px;
+  height: 35px;
+  background-position: -94px -100px;
+}
+
+.bg-one {
+  width: 9px;
+  height: 19px;
+  background-position: -79px -211px;
+}
+
+.bg-three {
+  width: 13px;
+  height: 19px;
+  background-position: -210px -155px;
+}
+
+.bg-two {
+  width: 13px;
+  height: 19px;
+  background-position: -46px -211px;
+}
+
+.bg-icon_fire {
+  width: 16px;
+  height: 22px;
+  background-position: -10px -211px;
+}
+
+.bg-icon_chuanyue {
+  width: 56px;
+  height: 41px;
+  background-position: -103px -10px;
+}
+
+.bg-icon_dushi {
+  width: 60px;
+  height: 34px;
+  background-position: -179px -10px;
+}
+
+/*登录sprites*/
+.my-loginIcon {
+  background: url(../imgs/login_sprites.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.bg-icon_grzx {
+  width: 18px;
+  height: 20px;
+  background-position: -90px -10px;
+}
+
+
+.bg-icon_grzx_hover {
+  width: 18px;
+  height: 20px;
+  background-position: -90px -50px;
+}
+
+
+.bg-icon_quit {
+  width: 14px;
+  height: 14px;
+  background-position: -10px -90px;
+}
+
+
+.bg-icon_quit_hover {
+  width: 14px;
+  height: 14px;
+  background-position: -44px -90px;
+}
+
+
+.bg-icon_wdsj {
+  width: 19px;
+  height: 20px;
+  background-position: -10px -50px;
+}
+
+
+.bg-icon_wdsj_hover {
+  width: 19px;
+  height: 20px;
+  background-position: -49px -50px;
+}
+
+
+.bg-icon_zjyd {
+  width: 20px;
+  height: 20px;
+  background-position: -10px -10px;
+}
+
+
+.bg-icon_zjyd_hover {
+  width: 20px;
+  height: 20px;
+  background-position: -50px -10px;
+}
+
+
+/*分页*/
+
+.pagination {
+  font-size: 0;
+}
+
+.pagination .pager {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.pagination .pager li:nth-child(1) {
+  margin-left: 0;
+}
+
+.pagination .pager li {
+  margin: 5px 0 0 18px;
+  padding: 0 5px;
+  float: left;
+  min-width: 13px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.pagination .pager li.active {
+  background-color: rgba(30, 136, 255, 1);
+  border-radius: 2px;
+  cursor: default;
+  color: #FFFFFF;
+}
+
+.pagination .pager li.active a {
+  color: #fff;
+  cursor: default;
+}
+
+.pagination .pager .number {
+  cursor: pointer;
+}
+
+.pagination .btn-pre,
+.pagination .btn-next {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  background-color: #f7f7f7;
+  border-radius: 32px;
+}
+
+.pagination .btn-pre {
+  margin-right: 10px;
+}
+
+.pagination .btn-next {
+  margin-left: 10px;
+}
+
+.pagination .can-abled {
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+
+.pagination .can-abled:hover {
+  background-color: rgba(30, 136, 255, 1);
+}
+
+.pagination .btn-pre img,
+.pagination .btn-next img {
+  display: block;
+  margin: 12px 13px;
+}
+
+.pagination .jump-number {
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pagination .jump-number input {
+  width: 50px;
+  height: 32px;
+  line-height: 30px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.pagination .jump {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background: rgba(30, 136, 255, 0.6);
+  border-radius: 32px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pagination .jump-number1 {
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pagination .jump-number1 input {
+  width: 50px;
+  height: 32px;
+  line-height: 30px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.pagination .jump1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background: rgba(30, 136, 255, 0.6);
+  border-radius: 32px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  padding: 25px 0 30px 0;
+  background-color: rgba(244, 244, 244, 1);
+}
+/* .footer .footer-top {
+  width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(216, 216, 216, 1);
+}
+.footer .footer-top p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  margin-bottom: 20px;
+}
+.footer .footer-top span {
+  display: inline-block;
+  margin: 0 15px 20px 0;
+  font-size: 14px;
+}
+.footer .footer-top a {
+  color: rgba(153, 153, 153, 1);
+} */
+.footer .footer-con {
+  font-size: 14px;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+}
+.footer .footer-con p {
+  margin-top: 8px;
+}
+.footer .footer-con .about {
+  margin-bottom: 25px;
+}
+.footer .footer-con .about a {
+  color: rgba(153, 153, 153, 1);
+}
+.footer .footer-top a:hover,
+.footer .footer-con .about a:hover {
+  color: rgba(30, 136, 255, 1);
+}
+.footer p img {
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+.bookCover {
+  box-shadow: 0 0 6px #999;
+}
