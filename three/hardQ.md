@@ -35,3 +35,27 @@ const a = { foo: 'bar', obj: { a: 1, b: 2 } };
 const b = deepClone(a); // a !== b, a.obj !== b.obj
 
 ```
+
+#### proxy
+- 代理访问的基本原理是什么,为何会存在对象设置代理的时候只设置对象的set方法作为handle,但是仍然能够取到值呢,只设置对象的get方法,对对象设置值仍然能够设置成功?
+```js
+const a = { b: 1, c: 2 };
+
+const proxy = new Proxy(a, {
+    get: (target, key) => {
+        if (key === 'b') {
+            return 3;
+        }
+    }
+});
+
+
+console.log(proxy.b);
+console.log(a.b);
+
+proxy.b = 4;
+
+console.log(proxy.b);
+console.log(a.b);//为何被修改了,不是没有set方法吗
+
+```
