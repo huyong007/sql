@@ -1,117 +1,104 @@
-html {
-  font-size: 62.5%;
+.box {
+  padding: 100px;
 }
 
-@media only screen and (min-width: 481px) {
-  html {
-    font-size: 94% !important;
-  }
+.block {
+  position        : relative;
+  width           : 100px;
+  height          : 100px;
+  background-color: aqua;
 }
 
-@media only screen and (min-width: 561px) {
-  html {
-    font-size: 109% !important;
-  }
+.block::before {
+  position     : absolute;
+  content      : '';
+  left         : -10px;
+  border-right : 10px solid red;
+  border-top   : 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 
-@media only screen and (min-width: 641px) {
-  html {
-    font-size: 125% !important;
-  }
+.block::after {
+  position     : absolute;
+  content      : '';
+  bottom       : 0;
+  right        : 0;
+  border-right : 100px solid red;
+  border-top   : 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 
-body {
-  font: 16px "Comic Sans MS", cursive;
+.four-color-block {
+  position     : relative;
+  width        : 10px;
+  height       : 10px;
+  border-left  : 20px solid yellow;
+  border-right : 20px solid red;
+  border-top   : 20px solid black;
+  border-bottom: 20px solid salmon;
+}
+
+.one-color-block {
+  position: relative;
+  width   : 10px;
+  height  : 10px;
+  border  : 20px solid salmon;
+}
+
+.tranparent-triangle-block {
+  position: relative;
+  width   : 100px;
+  height  : 100px;
+  border  : 2px solid salmon;
+}
+
+.tranparent-triangle-block::before {
+  position     : absolute;
+  content      : '';
+  left         : -10px;
+  top          : 20px;
+  border-right : 10px solid salmon;
+  border-top   : 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.tranparent-triangle-block::after {
+  position: absolute;
+  content : '';
+  left    : -7.2px;
+  /* 根据勾股定理,需要形成的三角形的宽度为2px,after向内偏移的数值是边框的根号二倍即为1.4*2;结果为10-2.8px */
+  top          : 20px;
+  border-right : 10px solid white;
+  border-top   : 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 
 
-/* spacing */
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 3px solid purple;
+.app-download {
+  position: relative;
+  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
+}
+.app-download::before {
+  content: '';
+  display: inline-block;
+  padding: .3em;
+  background: inherit;
+  border: inherit;
+  border-right: 0;
+  border-bottom: 0;
+  position: absolute;
+  top: -.2em;
+  left: 50%;
+  transform: rotate(45deg) translateX(-50%);
 }
 
-thead th:nth-child(1) {
-  width: 30%;
-}
-
-thead th:nth-child(2) {
-  width: 20%;
-}
-
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
-
-th,
-td {
-  padding: 2rem;
-}
-
-/* typography */
-
-html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
-}
-
-thead th,
-tfoot th {
-  font-family: 'Turret Road', cursive;
-}
-
-th {
-  letter-spacing: 2px;
-}
-
-td {
-  letter-spacing: 1px;
-}
-
-tbody td {
-  text-align: center;
-}
-
-tfoot th {
-  text-align: right;
-}
-
-thead,
-tfoot {
-  background: url(leopardskin.jpg);
-  color: white;
-  text-shadow: 1px 1px 1px black;
-}
-
-thead th,
-tfoot th,
-tfoot td {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-  border: 3px solid purple;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #ff33cc;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #e495e4;
-}
-
-tbody tr:nth-child(5) {
-  background-color: #33adff;
-}
-
-tbody tr {
-  background-image: url(noise.png);
-}
-
-table {
-  background-color: #ff33cc;
+.triangle{
+  display: inline-block;
+  padding: 4px;
+  border: 1px solid #000;;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(-45deg) ;
 }
