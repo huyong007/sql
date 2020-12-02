@@ -24,3 +24,9 @@
 - limit 
 - offset
 - like
+- 窗口函数 <窗口函数> over (partition by <用于分组的列名> order by <用于排序的列名>) 
+- 窗口函数位置可以放置如下两种函数:
+  + rank,dese_rank,row_number(函数括号内无需放置聚合的列名)
+  + sum,avg,count,max,min(函数括号内需要放置需要聚合的列名)
+- 窗口函数绝大部分都是作为select子句来使用
+- 窗口函数总结的
