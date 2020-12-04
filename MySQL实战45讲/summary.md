@@ -30,3 +30,4 @@
   + sum,avg,count,max,min(函数括号内需要放置需要聚合的列名)
 - 窗口函数绝大部分都是作为select子句来使用
 - 窗口函数总结的
+- alter table SUser and index index2(email(6)) // 给SUser表加上索引index2并选取邮箱这个字符串字段的前六位作为索引
