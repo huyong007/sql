@@ -42,7 +42,14 @@
   + 优化1:索引上的等值查询,给唯一索引加锁的时候,next-key lock退化为行锁
   + 优化2:索引上的等值查询,向右遍历时且最后一个值不满足等值条件的时候,next-key lock 退化为间隙锁
   + 一个bug:唯一索引上的范围查询会访问到不满足条件的第一个值为止
-
+- 两种kill命令
+  + 一个是kill query + 线程id,表示终止这个线程中正在执行的语句;
+  + kill connection + 线程id,connection可以省略,表示断开线程链接,如果线程中有语句正在执行,是要停止正在执行的语句的
+- join语句的两种算法
+  + Index Nested-Loop Join(NLJ)
+  + Block Nested-Loop Join(BNL)
+- **回表**:InnoDB在普通索引a上查到主键id的值后,再根据一个个主键id的值到主键索引上去查整行数据的过程
+- 
 
 ### 查询语句
 - select 
@@ -72,6 +79,13 @@
 - 窗口函数绝大部分都是作为select子句来使用
 - 窗口函数总结的
 - alter table SUser and index index2(email(6)) // 给SUser表加上索引index2并选取邮箱这个字符串字段的前六位作为索引
+
+### 工作方法
+- 四个脚本:最大的敌人--这是一个小操作,不需要那么严格
+  + 备份脚本
+  + 执行脚本
+  + 验证脚本
+  + 回滚脚本
 
 ### 不清晰的概念：
 - memory引擎
