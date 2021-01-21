@@ -1,6 +1,6 @@
 import os
 import sys
-global commitTag
+# global commitTag
 if len(sys.argv) == 1:
     commitTag = input('请输入commit参数')
 else:
