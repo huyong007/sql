@@ -110,3 +110,4 @@
   + redo log 和binlog都是顺序写,磁盘的顺序写比随机写速度更快
   + 组提交机制,可以大幅降低磁盘的iops消耗
 - 执行`show binlog events in 'master.000001'`出现`Error when executing command SHOW BINLOG EVENTS: Could not find target log`
+- session是什么?不同的线程?
