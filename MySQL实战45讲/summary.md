@@ -49,7 +49,11 @@
   + Index Nested-Loop Join(NLJ)
   + Block Nested-Loop Join(BNL)
 - **回表**:InnoDB在普通索引a上查到主键id的值后,再根据一个个主键id的值到主键索引上去查整行数据的过程
-- 
+- group by的几种用法:
+  + 如果group by 语句的结果没有排序要求,要在语句后面加order by null;
+  + 尽量让group by 过程用上表的索引,确认方法是explain结果里没有Using temporary 和Using filesort
+  + 如果group by 需要统计的数据量很大,尽量只使用内存临时表;也可以通过适当调大temp_table_size参数,来避免用到磁盘临时表;
+  + 如果数据量是在太大,使用SQL_BIG_RESULT这个提示,来告诉优化器直接使用排序算法得到group by的结果
 
 ### 查询语句
 - select 
